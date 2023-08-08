@@ -1,0 +1,9 @@
+{
+  "search.exclude": {
+    "**/.sst": true
+  },
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#09a4b8",
+    "titleBar.inactiveBackground": "#09a4b8"
+  },
+}
