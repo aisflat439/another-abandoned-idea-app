@@ -1,6 +1,5 @@
 import { SSTConfig } from "sst";
 import { Bus } from "./stacks/Bus";
-import { Api } from "./stacks/Api";
 import { Web } from "./stacks/Web";
 
 export default {
@@ -11,6 +10,6 @@ export default {
     };
   },
   stacks(app) {
-    app.stack(Api).stack(Bus).stack(Web);
+    app.stack(Bus).stack(Web);
   },
 } satisfies SSTConfig;

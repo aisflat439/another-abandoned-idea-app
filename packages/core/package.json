@@ -9,7 +9,7 @@
   "devDependencies": {
     "vitest": "0.34.1",
     "@types/node": "20.4.8",
-    "sst": "2.23.14"
+    "sst": "2.27.0"
   },
   "dependencies": {
     "zod": "^3.21.4"

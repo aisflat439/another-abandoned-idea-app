@@ -10,4 +10,6 @@ export function Bus({ stack }: StackContext) {
   bus.subscribe("todo.created", {
     handler: "packages/functions/src/events/todo-created.handler",
   });
+
+  return bus;
 }

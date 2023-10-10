@@ -1,16 +1,11 @@
-import { StackContext, use, StaticSite } from "sst/constructs";
-import { Api } from "./Api";
+import { StackContext, use, AstroSite } from "sst/constructs";
 
 export function Web({ stack }: StackContext) {
-  const api = use(Api);
-
-  const site = new StaticSite(stack, "site", {
-    buildOutput: "dist",
+  const site = new AstroSite(stack, "web", {
+    path: "packages/web",
   });
 
   stack.addOutputs({
     url: site.url,
   });
-
-  return Web;
 }
