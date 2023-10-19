@@ -48,9 +48,6 @@ importers:
 
   packages/functions:
     dependencies:
-      '@trpc/server':
-        specifier: ^10.40.0
-        version: 10.40.0
       zod:
         specifier: ^3.21.4
         version: 3.21.4
