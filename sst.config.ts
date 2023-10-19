@@ -1,6 +1,8 @@
 import { SSTConfig } from "sst";
 import { Bus } from "./stacks/Bus";
 import { Web } from "./stacks/Web";
+import { Database } from "./stacks/Database";
+import { Api } from "./stacks/Api";
 
 export default {
   config(_input) {
@@ -10,6 +12,6 @@ export default {
     };
   },
   stacks(app) {
-    app.stack(Bus).stack(Web);
+    app.stack(Bus).stack(Database).stack(Api).stack(Web);
   },
 } satisfies SSTConfig;

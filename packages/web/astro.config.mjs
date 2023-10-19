@@ -1,11 +1,11 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from 'astro/config'
+import tailwind from '@astrojs/tailwind'
 
-import aws from "astro-sst/lambda";
+import aws from 'astro-sst/lambda'
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
+  output: 'server',
   adapter: aws(),
   integrations: [tailwind()],
-});
+})

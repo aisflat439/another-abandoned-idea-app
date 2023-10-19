@@ -1,17 +1,31 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro'
+import { trpcAstro } from '../client'
+console.log('trpcAstro: ', trpcAstro)
 
-import { listTopFive } from "../../../core/src/top" 
+// import { trpcAstro } from '../pages/api/trpc/index'
 
-const [topFive] = await Promise.all([listTopFive()])
-console.log('topFive: ', topFive.map(i => i));
+// const yee = await trpcAstro.getCommentsForBlog('balh')
+// console.log('yee: ', yee)
+
+// const res = await trpcAstro.console.log(
+//   'topFive: ',
+//   topFive.map((i) => i),
+// )
 ---
 
-<Layout title="Abandoned Products Hunt">
-  <main>
+<Layout title="Astro">
+  <main class="min-h-screen">
     <h1>Welcome to <span class="text-gradient">Astro</span></h1>
     <p class="instructions">
-      {topFive.map(item => item.topfive)}
+      <!-- {topFive.map((item) => item.topfive)} -->
     </p>
   </main>
 </Layout>
+
+<script>
+  import { trpcAstro } from '../client'
+  console.log('trpcAstro: ', trpcAstro)
+  const topFive = await trpcAstro.get()
+  console.log('topFive: ', topFive)
+</script>

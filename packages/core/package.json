@@ -7,11 +7,13 @@
     "typecheck": "tsc -noEmit"
   },
   "devDependencies": {
-    "vitest": "0.34.1",
     "@types/node": "20.4.8",
-    "sst": "2.27.0"
+    "sst": "2.27.0",
+    "vitest": "0.34.1"
   },
   "dependencies": {
+    "aws-sdk": "^2.1473.0",
+    "electrodb": "^2.10.3",
     "zod": "^3.21.4"
   }
 }
