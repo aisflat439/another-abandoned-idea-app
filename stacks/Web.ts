@@ -1,7 +1,7 @@
-import { StackContext, use, AstroSite } from "sst/constructs";
+import { StackContext, NextjsSite } from "sst/constructs";
 
 export function Web({ stack }: StackContext) {
-  const site = new AstroSite(stack, "web", {
+  const site = new NextjsSite(stack, "web", {
     path: "packages/web",
   });
 

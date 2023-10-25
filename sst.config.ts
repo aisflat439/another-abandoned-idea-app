@@ -12,6 +12,6 @@ export default {
     };
   },
   stacks(app) {
-    app.stack(Bus).stack(Database).stack(Api).stack(Web);
+    app.stack(Bus).stack(Database).stack(Api);
   },
 } satisfies SSTConfig;
