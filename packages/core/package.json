@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@types/node": "20.4.8",
-    "sst": "2.27.0",
+    "sst": "2.32.1",
     "vitest": "0.34.1"
   },
   "dependencies": {

@@ -10,10 +10,11 @@
     "@tsconfig/node18": "^18.2.2",
     "@types/aws-lambda": "^8.10.119",
     "@types/node": "20.4.8",
-    "sst": "2.27.0",
+    "sst": "2.32.1",
     "vitest": "0.34.1"
   },
   "dependencies": {
+    "@trpc/server": "^10.42.0",
     "zod": "^3.21.4"
   }
 }
