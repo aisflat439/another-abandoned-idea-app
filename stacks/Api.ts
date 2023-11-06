@@ -2,12 +2,6 @@ import { StackContext, use, Api as ApiGateway, Config } from "sst/constructs";
 import { Database } from "./Database";
 
 export function Api({ stack }: StackContext) {
-  const github = Config.Secret.create(
-    stack,
-    "GITHUB_CLIENT_SECRET",
-    "GITHUB_CLIENT_ID"
-  );
-
   const db = use(Database);
 
   const api = new ApiGateway(stack, "api", {
@@ -15,11 +9,12 @@ export function Api({ stack }: StackContext) {
       stack.stage === "prod" ? "api.abandonedproductshunt.com" : undefined,
     defaults: {
       function: {
-        bind: [db, ...Object.values(github)],
+        bind: [db],
       },
     },
     routes: {
-      "GET /hello": "packages/functions/src/hello.handler",
+      "GET /trpc/{proxy+}": "packages/functions/src/trpc.handler",
+      "POST /trpc/{proxy+}": "packages/functions/src/trpc.handler",
     },
   });
 

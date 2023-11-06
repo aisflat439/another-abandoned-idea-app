@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+import { Header } from "~/components/Header";
 
 export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
   return (

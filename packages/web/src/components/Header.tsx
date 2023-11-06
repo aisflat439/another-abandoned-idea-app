@@ -21,7 +21,9 @@ export const Header = () => {
               </li>
             </ul>
             <ul className="flex space-between flex-1">
-              <li className="flex-1 text-red-400 dark:text-red-300">Submit</li>
+              <li className="flex-1 text-red-400 dark:text-red-300">
+                <Link href="/submit">Submit</Link>
+              </li>
               <li className="flex-1">Profile</li>
             </ul>
           </nav>

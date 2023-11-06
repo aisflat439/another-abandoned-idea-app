@@ -8,12 +8,13 @@
   },
   "devDependencies": {
     "@types/node": "20.4.8",
-    "sst": "2.32.1",
     "vitest": "0.34.1"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.441.0",
     "aws-sdk": "^2.1473.0",
     "electrodb": "^2.10.3",
+    "sst": "2.32.1",
     "zod": "^3.21.4"
   }
 }
